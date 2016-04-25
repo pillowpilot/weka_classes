@@ -1,0 +1,50 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[backend=biber]{biblatex}
+\bibliography{biblio.bib}
+\usepackage[hidelinks]{hyperref}
+\usepackage{csquotes}
+
+\author{Carlos Federico Gaona}
+\title{Minería de Datos con WEKA\nNotas de Curso}
+\date{}
+
+\begin{document}
+\part{Conceptos}
+\part{Modelos}
+\section{Modelos Lineales}
+Si disponemos de atributos numéricos y buscamos predecir un atributo también numérico, entonces es natural explorar los modelos lineales. Estos modelos asumen que el atributo a predecir $y^{(k)}$ responde a la forma $w_0 + \sum_i w_ix_i^{(k)}$, es decir a un hiperplano. Como se espera la presencia de errores dentro de las mediciones o simplemente se busca aproximar la forma ``real'' de $y$ se minimiza alguna métrica de distancia entre $y^{(k)}$ y $y^{(k)'} = w_o + \sum_i w_ix_i$ como pueden ser \cite{ruppert1980trimmed}:
+
+\begin{itemize}
+\item Minima Suma de Cuadrados
+  \[
+  \text{min }\sum_i (y^{(i)}-y^{(i)'})^2
+  \]
+\item Minimos Valores Absolutos
+  \[
+  \text{min }\sum_i |y^{(i)}-y^{(i)'}|
+  \]
+\item M, L y S Estimadores
+\item Minima Suma Podada de Cuadrados (Least Trimmed Squares)
+  \[
+  \text{min }\sum_j (y^{(j)}-y^{(j)'})^2, \quad \text{donde} \quad \{ y^{(j)}-y^{(j)'} \} \subset \{ y^{(i)}-y^{(i)'} \}
+  \]
+\item Minima Media de Cuadrados
+  \[
+  \text{min }\text{med}_i (y^{(i)}-y^{(i)'})^2
+  \]
+\end{itemize}
+
+Segun \cite{witten2011data}, 
+
+% Ventajas
+%  bajo sesgo ?
+%  simples de interpretar y de entrenar
+% Desventajas
+%  linealidad
+\part{Evaluacion}
+
+\printbibliography
+\end{document}

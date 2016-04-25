@@ -1,0 +1,90 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.6 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nty/global}
+    \entry{ruppert1980trimmed}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ca15388bebf8dfd3024fe7557ae32d5c}{%
+           family={Ruppert},
+           family_i={R\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{hash=6aeb704e3d63cf9f8a97958c681d6d7d}{%
+           family={Carroll},
+           family_i={C\bibinitperiod},
+           given={Raymond\bibnamedelima J},
+           given_i={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{3a54cfd6a085ecb642134f3accf541d1}
+      \strng{fullhash}{3a54cfd6a085ecb642134f3accf541d1}
+      \field{sortinit}{R}
+      \field{sortinithash}{c7387613477035a752d935acfc3e3ea2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{372}
+      \field{title}{Trimmed least squares estimation in the linear model}
+      \field{volume}{75}
+      \field{year}{1980}
+      \field{pages}{828\bibrangedash 838}
+      \range{pages}{11}
+    \endentry
+    \entry{witten2011data}{book}{}
+      \name{author}{3}{}{%
+        {{hash=a05810254b3460a705b74882da47f531}{%
+           family={Witten},
+           family_i={W\bibinitperiod},
+           given={I.H.},
+           given_i={I\bibinitperiod}}}%
+        {{hash=41db6855941f48d0c693979786902442}{%
+           family={Frank},
+           family_i={F\bibinitperiod},
+           given={E.},
+           given_i={E\bibinitperiod}}}%
+        {{hash=eeef092f48b19cc3d78ff53af91c2a52}{%
+           family={Hall},
+           family_i={H\bibinitperiod},
+           given={M.A.},
+           given_i={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier Science}%
+      }
+      \strng{namehash}{bf4b04bb3f887e4b59f154b3b9a97ac6}
+      \strng{fullhash}{bf4b04bb3f887e4b59f154b3b9a97ac6}
+      \field{sortinit}{W}
+      \field{sortinithash}{99e3ba1b3f78bb6f073e7fa7ac11636b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780080890364}
+      \field{series}{The Morgan Kaufmann Series in Data Management Systems}
+      \field{title}{Data Mining: Practical Machine Learning Tools and Techniques}
+      \field{year}{2011}
+      \verb{url}
+      \verb https://books.google.com.py/books?id=bDtLM8CODsQC
+      \endverb
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+
