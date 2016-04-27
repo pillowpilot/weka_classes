@@ -19,6 +19,23 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global}
+    \entry{Hu07}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=935878b7e9071b3ba4b2cd27c85877aa}{%
+           family={Hu},
+           family_i={H\bibinitperiod},
+           given={Shuhua},
+           given_i={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{935878b7e9071b3ba4b2cd27c85877aa}
+      \strng{fullhash}{935878b7e9071b3ba4b2cd27c85877aa}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Estimation error}
+      \field{year}{2007}
+    \endentry
     \entry{ruppert1980trimmed}{article}{}
       \name{author}{2}{}{%
         {{hash=ca15388bebf8dfd3024fe7557ae32d5c}{%

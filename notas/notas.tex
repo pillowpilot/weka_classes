@@ -56,7 +56,13 @@ Si disponemos de atributos numéricos y buscamos predecir un atributo también n
   \]
 \end{itemize}
 
-Segun \cite{witten2011data}, tenemos que \lstinline{LinearRegression()} utiliza la minimización de la suma de los cuadrados sin embargo 
+La mayor característica de los métodos lineales es, precisamente, su linealidad. Considerando que es raro encontrar un fenómeno que se comporte linealmente, la linealidad es una desventaja. Sin embargo, esto también permite que el modelo presente un menor sesgo y se verá mas adelante que esto se suele aprovechar.
+
+%TODO Add reference to model-tree and such...
+
+Segun \cite{witten2011data}, tenemos que \lstinline{LinearRegression()} utiliza la minimización de la suma de los cuadrados sin embargo dispone de un método de selección de atributos basado en el Criterio de Información de Akaike (ver \ref{modelselection_aic}) que simplifica el modelo resultante y está activado por defecto.
+%TODO Fix reference
+%TODO Add coefficients interpretation
 
 \section{Ejemplos}
 
@@ -79,7 +85,7 @@ Segun \cite{witten2011data}, tenemos que \lstinline{LinearRegression()} utiliza 
 \end{lstlisting}
 
 % TODO Check Logistic()
-También podemos utilizar \lstinline{LinearRegression()}\footnote{El criterio para la selección de los atributos a utilizar se decide con \textit{-S} (attributeSelectionMethod). Es un parámetro a tener en cuenta.}, \lstinline{MultilayerPerceptron()}\footnote{Si activamos la opción \textit{-G} (GUI) podremos modificar la topología de la red.} y con algunas modificaciones \lstinline{Logistic()}.
+También podemos utilizar \lstinline{LinearRegression()}, \lstinline{MultilayerPerceptron()}\footnote{Si activamos la opción \textit{-G} (GUI) podremos modificar la topología de la red.} y con algunas modificaciones \lstinline{Logistic()}.
 
 % Ventajas
 %  bajo sesgo ?
@@ -88,5 +94,43 @@ También podemos utilizar \lstinline{LinearRegression()}\footnote{El criterio pa
 %  linealidad
 \part{Evaluacion}
 
+\part{Selección de Modelos}
+\section{Principio de Parsimonia}
+Tambien llamado Navaja de Ockham o, en inglés, Ockham's Razor. Es un principio según el cual ``entre varias explicaciones equivalentes, se prefiere la mas simple''. 
+
+Cabe destacar que fueron muchas las críticas contra este principio por ``ser imprudente''. La \textit{anti navaja} de A. Einstein: ``Simple, pero no más simple.''.
+
+\section{Maximum Log-Likelihood}
+En español, maximización de verosimilitud. Dado un modelo con parametros $\theta$ y un conjunto de muestras $X$ independientes e identicamente distribuidos, la verosimilitud de los parametros dado el conjunto de muestras $\mathcal{L}(\theta|X)$ es igual a la probabilidad de obtener las muestras dado los parametros $P(X|\theta)$. Es decir, cual es la ``probabilidad'' de que los parametros $\theta$ ``expliquen'' las muestras $X$.
+
+Luego tenemos que si maximizamos $\mathcal{L}(\theta|X)$ tendremos un conjunto de parametros $\hat{\theta}$ tal que sean o sean lo suficientemente cercanos a los parametros ``reales''\footnote{Suponiendo que el modelo ``real'' sea el mismo que el utilizado.}. Entonces tendremos que $\mathcal{L}(\theta|X) = P(X|\theta) = \prod_i P(x_i|\theta)$, sin embargo maximizar esto en la práctica es dificil por ello se busca maximizar el logaritmo de el, $\max_\theta \mathcal{L}(\theta|X) = \max_\theta \log \mathcal{L}(\theta|X) = \log \mathcal{L}(\hat{\theta}|X)= \sum_i P(x_i|\theta)$.
+
+%TODO Add plot from matlab!!
+\section{Akaike Information Criterion}\label{modelselection_aic}
+El AIC se define como $AIC = 2K - 2\ln{\mathcal{L}(\hat{\theta}|X)}$, donde $K$ es la cantidad de parametros que se utilizaron en el modelo mas uno y $\mathcal{L}(\hat{\theta}|X)$ es el maximo de la función de verosimilitud. Este criterio indica que el modelo es ``mejor'' si posee un \textbf{menor} valor y es un criterio de comparación entre modelos \textbf{bajo los mismos datos}, es decir que el valor en si mismo no es significativo sino si el valor es menor o no al $AIC$ de otro modelo con el cual comparamos. La interpretación es la siguiente: el término $2K$ es la penalización, por tener signo positivo y estamos buscando un menor valor, por la cantidad de parámetros que el modelo posee ya que a mayor cantidad de parámetros \textbf{mayor varianza} y mayor posibilidad de ``overfitting'', por otra parte el término $-2 \ln{\mathcal{L}(\hat{\theta}|X)}$ favorece a una mejor calificación, por el tener un signo negativo, y está relacionado a verosimilitud del modelo para esos parámetros y esas muestras y también la un \textbf{menor sesgo}\cite{Hu07}.
+
+%TODO Add critics
+
+\part{Importación y Exportación}
+\section{Exportación}
+Para exportar un modelo hacemos uso de \lstinline{weka.core.SerializationHelper()} disponible desde la versión 3.5.5. Destacamos que el método \lstinline{write} también trabaja con flujos y que es necesario capturar las excepciones que arroja.
+\begin{lstlisting}
+  // Disponemos del modelo a exportar
+  Classifier model = ...
+  
+  // Utilizamos el método .write
+  String outputFilename = ...
+  SerializationHelper.write(outputFilename, model);
+\end{lstlisting}
+
+\section{Importación}
+Para importar un modelo utilizamos \lstinline{weka.core.SerializationHelper()} disponible desde la versión 3.5.5. Destacamos que el método \lstinline{read} también trabaja con flujos y que es necesario capturar las excepciones que arroja.
+\begin{lstlisting}
+  Classifier model = (Classifier) SerializationHelper.read(inputFilename);
+\end{lstlisting}
+
+\section{Trabajado en MATLAB}
+Para trabajar con las herramientas que provee WEKA utilizamos \lstinline{javaaddpath} para agregar la ubicacion de la biblioteca\footnote{El archivo que usualmente llamado ``weka.jar''.}.
+%TODO Add tested code
 \printbibliography
 \end{document}
