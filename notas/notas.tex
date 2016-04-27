@@ -7,6 +7,25 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{csquotes}
 
+\usepackage{color}
+\usepackage{listings}
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  language=java,                   % sets language
+  backgroundcolor=\color{white},   % choose the background color
+  basicstyle=\footnotesize,        % size of fonts used for the code
+  breaklines=true,                 % automatic line breaking only at whitespace
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  keywordstyle=\color{blue},       % keyword style
+  stringstyle=\color{mymauve},     % string literal style
+}
+
 \author{Carlos Federico Gaona}
 \title{Minería de Datos con WEKA\nNotas de Curso}
 \date{}
@@ -15,7 +34,7 @@
 \part{Conceptos}
 \part{Modelos}
 \section{Modelos Lineales}
-Si disponemos de atributos numéricos y buscamos predecir un atributo también numérico, entonces es natural explorar los modelos lineales. Estos modelos asumen que el atributo a predecir $y^{(k)}$ responde a la forma $w_0 + \sum_i w_ix_i^{(k)}$, es decir a un hiperplano. Como se espera la presencia de errores dentro de las mediciones o simplemente se busca aproximar la forma ``real'' de $y$ se minimiza alguna métrica de distancia entre $y^{(k)}$ y $y^{(k)'} = w_o + \sum_i w_ix_i$ como pueden ser \cite{ruppert1980trimmed}:
+Si disponemos de atributos numéricos y buscamos predecir un atributo también numérico, entonces es natural explorar los modelos lineales. Estos modelos asumen que el atributo a predecir $y^{(k)}$ responde a la forma $w_0 + \sum_i w_ix_i^{(k)}$, es decir a un hiperplano. Como se espera la presencia de errores dentro de las mediciones o simplemente se busca aproximar la forma ``real'' de $y$ se minimiza alguna métrica de distancia entre $y^{(k)}$ y $y^{(k)'} = w_o + \sum_i w_ix_i$ como pueden ser según \cite{ruppert1980trimmed}:
 
 \begin{itemize}
 \item Minima Suma de Cuadrados
@@ -37,7 +56,30 @@ Si disponemos de atributos numéricos y buscamos predecir un atributo también n
   \]
 \end{itemize}
 
-Segun \cite{witten2011data}, 
+Segun \cite{witten2011data}, tenemos que \lstinline{LinearRegression()} utiliza la minimización de la suma de los cuadrados sin embargo 
+
+\section{Ejemplos}
+
+% TODO Check if dataset.setClassIndex es necesario
+\begin{lstlisting}
+  // Cargamos los datos de alguna manera
+  Instances dataset = ...
+  // Preparamos una instancia de prueba
+  Instance testInstance = ...
+  
+  // Creamos una instancia del modelo
+  Classifier model = new SimpleLinearRegression();
+  // Entrenamos con los datos de 'dataset'
+  model.buildClassifier(dataset);
+  
+  // Podemos imprimir los detalles del modelo
+  System.out.println(model);
+  // Tambien podemos predecir una instancia
+  double prediction = model.classifyInstance(testInstance);
+\end{lstlisting}
+
+% TODO Check Logistic()
+También podemos utilizar \lstinline{LinearRegression()}\footnote{El criterio para la selección de los atributos a utilizar se decide con \textit{-S} (attributeSelectionMethod). Es un parámetro a tener en cuenta.}, \lstinline{MultilayerPerceptron()}\footnote{Si activamos la opción \textit{-G} (GUI) podremos modificar la topología de la red.} y con algunas modificaciones \lstinline{Logistic()}.
 
 % Ventajas
 %  bajo sesgo ?
