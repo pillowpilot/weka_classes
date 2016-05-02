@@ -19,6 +19,38 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global}
+    \entry{dougherty1995supervised}{inproceedings}{}
+      \true{moreauthor}
+      \name{author}{3}{}{%
+        {{hash=43dc6b84c6aee54f1f89e03322044ad3}{%
+           family={Dougherty},
+           family_i={D\bibinitperiod},
+           given={James},
+           given_i={J\bibinitperiod}}}%
+        {{hash=f2a149b8d68fbffd75e8ece81b80708f}{%
+           family={Kohavi},
+           family_i={K\bibinitperiod},
+           given={Ron},
+           given_i={R\bibinitperiod}}}%
+        {{hash=03d7c039edad82103bc272d037128f69}{%
+           family={Sahami},
+           family_i={S\bibinitperiod},
+           given={Mehran},
+           given_i={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{36a8e0d489ee8f1e9ecbdce8dcae7603}
+      \strng{fullhash}{12d35e7c3cdac27e6c3c1a4944032c22}
+      \field{sortinit}{D}
+      \field{sortinithash}{78f7c4753a2004675f316a80bdb31742}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Machine learning: proceedings of the twelfth international conference}
+      \field{title}{Supervised and unsupervised discretization of continuous features}
+      \field{volume}{12}
+      \field{year}{1995}
+      \field{pages}{194\bibrangedash 202}
+      \range{pages}{9}
+    \endentry
     \entry{Hu07}{misc}{}
       \name{author}{1}{}{%
         {{hash=935878b7e9071b3ba4b2cd27c85877aa}{%
@@ -35,6 +67,53 @@
       \field{labeltitlesource}{title}
       \field{title}{Estimation error}
       \field{year}{2007}
+    \endentry
+    \entry{irani1993multi}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f14e26c8eb7e594a13e531ee9ad380db}{%
+           family={Irani},
+           family_i={I\bibinitperiod},
+           given={Keki\bibnamedelima B},
+           given_i={K\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{f14e26c8eb7e594a13e531ee9ad380db}
+      \strng{fullhash}{f14e26c8eb7e594a13e531ee9ad380db}
+      \field{sortinit}{I}
+      \field{sortinithash}{25e99d37ba90f7c4fb20baf4e310faf3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Multi-interval discretization of continuous-valued attributes for classification learning}
+      \field{year}{1993}
+    \endentry
+    \entry{kotsiantis2006discretization}{article}{}
+      \name{author}{2}{}{%
+        {{hash=455d9b7c9c8ff82a0a3673712365237c}{%
+           family={Kotsiantis},
+           family_i={K\bibinitperiod},
+           given={Sotiris},
+           given_i={S\bibinitperiod}}}%
+        {{hash=ff04e714386a10358e5f20bc2ff0afb1}{%
+           family={Kanellopoulos},
+           family_i={K\bibinitperiod},
+           given={Dimitris},
+           given_i={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{namehash}{6c2f53ce0ad913f4c58560f553c4cd06}
+      \strng{fullhash}{6c2f53ce0ad913f4c58560f553c4cd06}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GESTS International Transactions on Computer Science and Engineering}
+      \field{number}{1}
+      \field{title}{Discretization techniques: A recent survey}
+      \field{volume}{32}
+      \field{year}{2006}
+      \field{pages}{47\bibrangedash 58}
+      \range{pages}{12}
     \endentry
     \entry{ruppert1980trimmed}{article}{}
       \name{author}{2}{}{%

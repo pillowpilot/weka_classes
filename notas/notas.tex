@@ -92,6 +92,44 @@ También podemos utilizar \lstinline{LinearRegression()}, \lstinline{MultilayerP
 %  simples de interpretar y de entrenar
 % Desventajas
 %  linealidad
+
+\section{Árboles}
+Una de las maneras usuales de atacar problemas es mediante la estrategia ``divide y conquistarás'', los arboles, con su estructura recursiva, represetan fielmente esta idea. Existen multiud de variedades de árboles utilizados en minería de datos, sin embargo la idea predominante es dividir el conjunto de muestras en dos o mas subconjuntos utilizando un criterio de decisión, usualmente el valor de un atributo, y repetir esto hasta que se alcance la máxima complejidad aceptable o repetir hasta que se alcanze una predicción lo suficientemente buena.
+
+En el caso de atributos nominales, la división es trivial y única. Para los atributos numéricos, se dispone de multitud de métodos listados en \cite{kotsiantis2006discretization} y \cite{dougherty1995supervised}. En WEKA disponemos de \lstinline{weka.filters.unsupervised.attribute.NumericToNominal} que simplemente crea una biyección entre cada valor numérico y una clase, \lstinline{weka.filters.unsupervised.attribute.Discretize} divide el atributo en clases con la misma anchura (equal-width binning) con opciones de optimización o en clases con una misma frecuencia (equal-frecuency binning) y finalmente \lstinline{weka.filters.supervised.attribute.Discretize} el cual utiliza el método MDL de Fayyad e Irani, ver \cite{irani1993multi}, que es el método por defecto utilizado en los modelos.
+
+\subsection{\lstinline{J48()}}
+El modelo \lstinline{J48()} es el mas conocido entre los árboles presentes en WEKA, este modelo es la versión libre del algoritmo C4.5. En este modelo se construye un árbol de forma voráz seleccionando el atributo que ``mejor'' divide a las muestras. El criterio de selección está basado en la ganancia de información midiendo la diferencia de entropía entre el conjunto de datos original y el mismo conjunto de datos divido por el atributo.
+
+\[
+\text{Entropía} = H = \sum_i -p_i \log_2(p_i)
+\]
+
+Veamos este ejemplo. Las muestras estan originalmente clasificados en $(0, 0, 0, 0, 1, 1, 1)$ y luego de la división segun un atributo $A$ se llega $\text{right}=(0, 0, 0, 1)$ y $\text{left}=(0, 1, 1)$. Medimos la entropía de las muestras antes de la división.
+
+\[
+H_0 = -\frac{4}{7} \log\frac{4}{7} -\frac{3}{7} \log\frac{3}{7} \approx 0.985
+\]
+Medimos la entropía en cada subconjunto.
+\[
+H_{right} = -\frac{3}{4} \log\frac{3}{4} - \frac{1}{4} \log\frac{1}{4} \approx 0.811
+\]
+\[
+H_{left} = -\frac{1}{3} \log\frac{1}{3} - \frac{2}{3} \log\frac{2}{3} \approx 0.918
+\]
+Obtenemos la entropía al final de la división haciendo una suma ponderada según el tamaño relativo de los subconjuntos.
+\[
+H_1 = \frac{4}{7}H_{right} + \frac{3}{7}H_{left} = \frac{6}{7} \approx 0.857
+\]
+Finalmente la Ganancia de Información, en inglés Information Gain, es la diferencia de entropías.
+\[
+IG = H_0 - H_1 \approx 0.128
+\]
+
+Luego de calcular la IG para cada atributo, se selecciona el mayor valor. Y se aplica recursivamente sobre los hijos. El \lstinline{J48()} aplica otros procedimientos para simplificar aún mas el árbol resultante.
+
+\subsection{\lstinline{RandomTree()}}
+
 \part{Evaluacion}
 
 \part{Selección de Modelos}
@@ -118,7 +156,7 @@ Para exportar un modelo hacemos uso de \lstinline{weka.core.SerializationHelper(
   // Disponemos del modelo a exportar
   Classifier model = ...
   
-  // Utilizamos el método .write
+  // Utilizamos el metodo .write
   String outputFilename = ...
   SerializationHelper.write(outputFilename, model);
 \end{lstlisting}

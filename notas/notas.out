@@ -2,8 +2,14 @@
 \BOOKMARK [0][-]{part.2}{II Modelos}{}% 2
 \BOOKMARK [1][-]{section.1}{Modelos Lineales}{part.2}% 3
 \BOOKMARK [1][-]{section.2}{Ejemplos}{part.2}% 4
-\BOOKMARK [0][-]{part.3}{III Evaluacion}{}% 5
-\BOOKMARK [0][-]{part.4}{IV Selecci\363n de Modelos}{}% 6
-\BOOKMARK [1][-]{section.3}{Principio de Parsimonia}{part.4}% 7
-\BOOKMARK [1][-]{section.4}{Maximum Log-Likelihood}{part.4}% 8
-\BOOKMARK [1][-]{section.5}{Akaike Information Criterion}{part.4}% 9
+\BOOKMARK [1][-]{section.3}{\301rboles}{part.2}% 5
+\BOOKMARK [2][-]{subsection.3.1}{J48\(\)}{section.3}% 6
+\BOOKMARK [0][-]{part.3}{III Evaluacion}{}% 7
+\BOOKMARK [0][-]{part.4}{IV Selecci\363n de Modelos}{}% 8
+\BOOKMARK [1][-]{section.4}{Principio de Parsimonia}{part.4}% 9
+\BOOKMARK [1][-]{section.5}{Maximum Log-Likelihood}{part.4}% 10
+\BOOKMARK [1][-]{section.6}{Akaike Information Criterion}{part.4}% 11
+\BOOKMARK [0][-]{part.5}{V Importaci\363n y Exportaci\363n}{}% 12
+\BOOKMARK [1][-]{section.7}{Exportaci\363n}{part.5}% 13
+\BOOKMARK [1][-]{section.8}{Importaci\363n}{part.5}% 14
+\BOOKMARK [1][-]{section.9}{Trabajado en MATLAB}{part.5}% 15
