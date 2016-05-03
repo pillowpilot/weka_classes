@@ -32,6 +32,22 @@
 
 \begin{document}
 \part{Conceptos}
+\section{¿Qué es Minería de Datos?}
+En \cite{larose2014discovering} tenemos, ``Minería de datos es el proceso de descubrir nuevas correlaciones y patrones, examinando cuidadosamente a travez de grandes cantidades de datos almacenados en repositorios, utilizando tecnologías de reconocimiento de patrones como también técnicas estadíasticas y matemáticas'', entre varias otras definiciones. Sin embargo, esta actividad es un paso más dentro del proceso ``Descubrimiento de Conocimiento en Datos'' el cual engloba las actividades desde la obtención de los datos, su limpieza, la construcción de los modelos y su presentación final. En la actualidad el estandard CRISP-DM (Cross-Industry Standard Process for Data Mining) es el más utilizado \cite{oct2014poll} y detalla los siguientes pasos \cite{larose2014discovering}:
+\begin{description}
+\item[Business Understanding Phase] También llamado ``Research Understanding Phase''. Enuncia los objetivos claramente en términos del negocio/investigación. Traduce estos objectivos en términos de Minería de Datos.
+\item[Data Undestanding Phase] Colecta los datos. Se familiariza con los datos utilizando Exploratory Data Analysis. Evalúa la calidad de los datos y selecciona los subconjuntos de interes según el paso anterior.
+\item[Data Preparation Phase] Prepara los datos para ser procesados por pasos siguientes, es el paso mas laborioso. Selecciona y, de ser necesario, transforma las variables (atributos) que se consideran apropiadas para el paso siguiente.
+\item[Modeling Phase] Alimenta los modelos con los datos preparados y los calibra para óptimo rendimiento. De ser necesario, se puede volver a pasos anteriores a preparar datos para un modelo en particular.
+\item[Evaluation Phase] Determina si los modelos finales satisfacen los objectivos del primer paso.
+\item[Deployment Phase] Hacer uso de los modelos, la construcción no es suficiente. Pueder ser desde un simple reporte realizado por un experto hasta la restructuración de la empresa según las recomendaciones del modelo.
+\end{description}
+
+En \cite{larose2014discovering} se detallan 5 casos de estudio del CRISP-DM.
+
+\section{}
+
+
 \part{Modelos}
 \section{Modelos Lineales}
 Si disponemos de atributos numéricos y buscamos predecir un atributo también numérico, entonces es natural explorar los modelos lineales. Estos modelos asumen que el atributo a predecir $y^{(k)}$ responde a la forma $w_0 + \sum_i w_ix_i^{(k)}$, es decir a un hiperplano. Como se espera la presencia de errores dentro de las mediciones o simplemente se busca aproximar la forma ``real'' de $y$ se minimiza alguna métrica de distancia entre $y^{(k)}$ y $y^{(k)'} = w_o + \sum_i w_ix_i$ como pueden ser según \cite{ruppert1980trimmed}:
