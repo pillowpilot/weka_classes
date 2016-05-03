@@ -2054,7 +2054,8 @@
     <bcf:citekey order="3">kotsiantis2006discretization</bcf:citekey>
     <bcf:citekey order="4">dougherty1995supervised</bcf:citekey>
     <bcf:citekey order="5">irani1993multi</bcf:citekey>
-    <bcf:citekey order="6">Hu07</bcf:citekey>
+    <bcf:citekey order="6">arthur2007k</bcf:citekey>
+    <bcf:citekey order="7">Hu07</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global" type="entry" sortscheme="nty" sortnamekeyscheme="global">
   <bcf:sorting>

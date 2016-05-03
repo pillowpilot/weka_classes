@@ -19,6 +19,35 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global}
+    \entry{arthur2007k}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=9490d5d9532dc965f9f300a7a5c9fa13}{%
+           family={Arthur},
+           family_i={A\bibinitperiod},
+           given={David},
+           given_i={D\bibinitperiod}}}%
+        {{hash=b6fa64c3195f752823d0759db3cbca91}{%
+           family={Vassilvitskii},
+           family_i={V\bibinitperiod},
+           given={Sergei},
+           given_i={S\bibinitperiod}}}%
+      }
+      \list{organization}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics}%
+      }
+      \strng{namehash}{c59974bc84d7d18b3663c2ec2a4eaad7}
+      \strng{fullhash}{c59974bc84d7d18b3663c2ec2a4eaad7}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the eighteenth annual ACM-SIAM symposium on Discrete algorithms}
+      \field{title}{k-means++: The advantages of careful seeding}
+      \field{year}{2007}
+      \field{pages}{1027\bibrangedash 1035}
+      \range{pages}{9}
+    \endentry
     \entry{dougherty1995supervised}{inproceedings}{}
       \true{moreauthor}
       \name{author}{3}{}{%

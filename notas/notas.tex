@@ -130,6 +130,28 @@ Luego de calcular la IG para cada atributo, se selecciona el mayor valor. Y se a
 
 \subsection{\lstinline{RandomTree()}}
 
+\section{Clustering}
+Cuando disponemos de datos sin clasificación, tenemos un problema de clustering. En clustering se busca construir una forma de clasificar los datos según su ``similaridad''. En la práctica la ``similaridad'' entre dos muestras se mide con alguna métrica %TODO Add metrics
+
+% TODO Add most clustering scheme are very sensible to initial conditions, therefore is common to run multiple times to try to find an global optimum
+% TODO Add NP-hard O(n^f(O(k))log n)
+\subsection{$k$-means}
+El algoritmo de $k$-means es el algoritmo de clustering mas conocido y se han propuesto multiples modificaciones para mejorar su desempeño. % TODO Add cites
+En $k$-means se inicia creando en ubicaciones aleatorias $k$ puntos los cuales serán los representantes de cada clase. Luego se itera, separando las muetras en grupos tales que una muestra pertenece a la clase representada por el punto representante mas cercano y al finalizar esto se reubican los puntos representantes en el centroide de las muestras de su clase. El algoritmo converge cuando no ocurren reasignaciones, mide la similaridad con la distancia euclidiana y busca el óptimo minimizando la suma de los cuadrados de las distancias entre las muestras y su respectivo centroide. Es muy sensible a las condiciones iniciales, es decir a las posiciones iniciales de los centroides, por ello se suele correr varias veces. La elección de la $k$ es arbitraria, puede considerarse como un parámetro mas del algoritmo y probar distintos valores o puede ser proveído por el problema, como puede ser la opinión de un experto.
+
+Esencialmente, $k$-means es un algoritmo de optimización donde se le han definido conceptos del problema de clustering. Por ello, clustering puede ser atacado con todos los recursos ya existentes enfocados a problemas de optimización.
+
+Una de las mejoras es $k$-means++, el cual modifica el procedimiento de inicialización de los centroides. Provee una mayor carga en la inicialización, sin embargo el tiempo total se reduce y reduce considerablemente los errores finales. Sea $D(x)$ la distancia entre la muestra $x$ y el punto representante mas cercano, entonces el algoritmo $k$-means++ es el siguiente:
+\begin{enumerate}
+\item Seleccionar como el primer punto representante una de las $n$ muestras con una probabilidad uniforme. Es decir, cada muestra tiene la misma probabilidad de ser selecionada.
+\item De las $n-1$ muestras, seleccionar el siguiente punto representante con una probabilidad igual a $\frac{D(x_i)^2}{\sum_j D(x_j)^2}$. Así se busca penalizar la selección de puntos cercanos a puntos representantes ya seleccionados.
+\item Se repite el paso anterior hasta tener $k$ puntos representantes.
+\item Continuamos con el algoritmo usual $k$-means, utilizando los puntos anteriormente seleccionados.
+\end{enumerate}
+Notamos que los centroides inicialmente estan en las mismas posiciones que algunas muestras. Los fundamentos teoricos y datos experimentales en \cite{arthur2007k}.
+
+
+
 \part{Evaluacion}
 
 \part{Selección de Modelos}
