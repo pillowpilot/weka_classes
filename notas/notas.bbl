@@ -19,6 +19,46 @@
 
 \refsection{0}
   \sortlist[entry]{nty/global}
+    \entry{aloise2009np}{article}{}
+      \name{author}{4}{}{%
+        {{hash=b1c2417eef13b5ae6a6de636ccee9bf2}{%
+           family={Aloise},
+           family_i={A\bibinitperiod},
+           given={Daniel},
+           given_i={D\bibinitperiod}}}%
+        {{hash=b146e287daf8a0e43f0558b44e799634}{%
+           family={Deshpande},
+           family_i={D\bibinitperiod},
+           given={Amit},
+           given_i={A\bibinitperiod}}}%
+        {{hash=7bb981a79a1c9c28df155eaf022cd6ba}{%
+           family={Hansen},
+           family_i={H\bibinitperiod},
+           given={Pierre},
+           given_i={P\bibinitperiod}}}%
+        {{hash=b98430470600e3c7562c6efad868eacc}{%
+           family={Popat},
+           family_i={P\bibinitperiod},
+           given={Preyas},
+           given_i={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{462ae54ffbaf820d2004cf8233b376f2}
+      \strng{fullhash}{65c314eeeeac4bc7eb808c127ecdae1b}
+      \field{sortinit}{A}
+      \field{sortinithash}{b685c7856330eaee22789815b49de9bb}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Machine learning}
+      \field{number}{2}
+      \field{title}{NP-hardness of Euclidean sum-of-squares clustering}
+      \field{volume}{75}
+      \field{year}{2009}
+      \field{pages}{245\bibrangedash 248}
+      \range{pages}{4}
+    \endentry
     \entry{arthur2007k}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=9490d5d9532dc965f9f300a7a5c9fa13}{%
@@ -47,6 +87,94 @@
       \field{year}{2007}
       \field{pages}{1027\bibrangedash 1035}
       \range{pages}{9}
+    \endentry
+    \entry{bahmani2012scalable}{article}{}
+      \name{author}{5}{}{%
+        {{hash=c16d7309f1ff508dcc07ce9945102f88}{%
+           family={Bahmani},
+           family_i={B\bibinitperiod},
+           given={Bahman},
+           given_i={B\bibinitperiod}}}%
+        {{hash=b69680fb4282030f235cc0aa7bd18583}{%
+           family={Moseley},
+           family_i={M\bibinitperiod},
+           given={Benjamin},
+           given_i={B\bibinitperiod}}}%
+        {{hash=b8e887de21ca59f638e8521e3cbc8701}{%
+           family={Vattani},
+           family_i={V\bibinitperiod},
+           given={Andrea},
+           given_i={A\bibinitperiod}}}%
+        {{hash=8b41fe0754fd3864ac9f18e92f6daf24}{%
+           family={Kumar},
+           family_i={K\bibinitperiod},
+           given={Ravi},
+           given_i={R\bibinitperiod}}}%
+        {{hash=b6fa64c3195f752823d0759db3cbca91}{%
+           family={Vassilvitskii},
+           family_i={V\bibinitperiod},
+           given={Sergei},
+           given_i={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {VLDB Endowment}%
+      }
+      \strng{namehash}{3c23db85261f8bc8bb2f2aabf1f2394f}
+      \strng{fullhash}{7ba24c9e398d15d8ff360d1bb6e22a2a}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the VLDB Endowment}
+      \field{number}{7}
+      \field{title}{Scalable k-means++}
+      \field{volume}{5}
+      \field{year}{2012}
+      \field{pages}{622\bibrangedash 633}
+      \range{pages}{12}
+    \endentry
+    \entry{bezdek1984fcm}{article}{}
+      \name{author}{3}{}{%
+        {{hash=05c40b6bd3672fcf93a67ea2b4220e25}{%
+           family={Bezdek},
+           family_i={B\bibinitperiod},
+           given={James\bibnamedelima C},
+           given_i={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a7fb5380f5d565382001ad436b8b1834}{%
+           family={Ehrlich},
+           family_i={E\bibinitperiod},
+           given={Robert},
+           given_i={R\bibinitperiod}}}%
+        {{hash=5a293b45dc0ad31577d7caa77052cb53}{%
+           family={Full},
+           family_i={F\bibinitperiod},
+           given={William},
+           given_i={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d39a85cb8b9ae8be79975eeffdf550d0}
+      \strng{fullhash}{d39a85cb8b9ae8be79975eeffdf550d0}
+      \field{sortinit}{B}
+      \field{sortinithash}{4ecbea03efd0532989d3836d1a048c32}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Computers \& Geosciences}
+      \field{number}{2}
+      \field{title}{FCM: The fuzzy c-means clustering algorithm}
+      \field{volume}{10}
+      \field{year}{1984}
+      \field{pages}{191\bibrangedash 203}
+      \range{pages}{13}
+    \endentry
+    \entry{crispdmpdf}{misc}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{59f25d509f3381b07695554a9f35ecb2}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.the-modeling-agency.com/crisp-dm.pdf}}
+      \field{note}{Accedido: 2016-mayo}
+      \field{title}{{CRISP-DM 1.0} Step-by-step data mining guide}
     \endentry
     \entry{dougherty1995supervised}{inproceedings}{}
       \true{moreauthor}
@@ -79,6 +207,14 @@
       \field{year}{1995}
       \field{pages}{194\bibrangedash 202}
       \range{pages}{9}
+    \endentry
+    \entry{asumdmarticle}{misc}{}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://developer.ibm.com/predictiveanalytics/2015/10/16/have-you-seen-asum-dm/}}
+      \field{note}{Accedido: 2016-mayo}
+      \field{title}{Have you seen ASUM-DM?}
     \endentry
     \entry{Hu07}{misc}{}
       \name{author}{1}{}{%
@@ -114,6 +250,14 @@
       \field{title}{Multi-interval discretization of continuous-valued attributes for classification learning}
       \field{year}{1993}
     \endentry
+    \entry{oct2014poll}{misc}{}
+      \field{sortinit}{K}
+      \field{sortinithash}{a7d5b3aec5a0890aae7baf85a209abfc}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://www.kdnuggets.com/polls/2014/analytics-data-mining-data-science-methodology.html}}
+      \field{note}{Accedido: 2016-mayo}
+      \field{title}{{KD Nuggets} What main methodology are you using for your analytics, data mining, or data science projects?}
+    \endentry
     \entry{kotsiantis2006discretization}{article}{}
       \name{author}{2}{}{%
         {{hash=455d9b7c9c8ff82a0a3673712365237c}{%
@@ -143,6 +287,51 @@
       \field{year}{2006}
       \field{pages}{47\bibrangedash 58}
       \range{pages}{12}
+    \endentry
+    \entry{larose2014discovering}{book}{}
+      \name{author}{1}{}{%
+        {{hash=f45b54cf6b748bed49e92281c9083d28}{%
+           family={Larose},
+           family_i={L\bibinitperiod},
+           given={Daniel\bibnamedelima T},
+           given_i={D\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{f45b54cf6b748bed49e92281c9083d28}
+      \strng{fullhash}{f45b54cf6b748bed49e92281c9083d28}
+      \field{sortinit}{L}
+      \field{sortinithash}{872351f18d0f736066eda0bf18bfa4f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Discovering knowledge in data: an introduction to data mining}
+      \field{year}{2014}
+    \endentry
+    \entry{quinlan1992learning}{inproceedings}{}
+      \true{moreauthor}
+      \name{author}{1}{}{%
+        {{hash=993fbcef3796a3c07fbb28feb96d0e8d}{%
+           family={Quinlan},
+           family_i={Q\bibinitperiod},
+           given={John\bibnamedelima R},
+           given_i={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Singapore}%
+      }
+      \strng{namehash}{13f3f9f6cf50b584bf56ceb26627bec5}
+      \strng{fullhash}{13f3f9f6cf50b584bf56ceb26627bec5}
+      \field{sortinit}{Q}
+      \field{sortinithash}{15867262911a166ca2270ec58a0e3fe9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{5th Australian joint conference on artificial intelligence}
+      \field{title}{Learning with continuous classes}
+      \field{volume}{92}
+      \field{year}{1992}
+      \field{pages}{343\bibrangedash 348}
+      \range{pages}{6}
     \endentry
     \entry{ruppert1980trimmed}{article}{}
       \name{author}{2}{}{%
@@ -208,6 +397,37 @@
       \verb{url}
       \verb https://books.google.com.py/books?id=bDtLM8CODsQC
       \endverb
+    \endentry
+    \entry{xu2005survey}{article}{}
+      \true{moreauthor}
+      \name{author}{2}{}{%
+        {{hash=af1f6890b49ac6de6ee9af944bdf1990}{%
+           family={Xu},
+           family_i={X\bibinitperiod},
+           given={Rui},
+           given_i={R\bibinitperiod}}}%
+        {{hash=58f7e47e9d72f27bae0b59cf8e6b0f42}{%
+           family={Wunsch},
+           family_i={W\bibinitperiod},
+           given={Donald},
+           given_i={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Ieee}%
+      }
+      \strng{namehash}{f2555459391c34f672bcc8590b94d043}
+      \strng{fullhash}{5608a9a656ab5a877fac3c278ea027af}
+      \field{sortinit}{X}
+      \field{sortinithash}{2999ebab86052e6d71b434385f8b4ed2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Neural Networks, IEEE Transactions on}
+      \field{number}{3}
+      \field{title}{Survey of clustering algorithms}
+      \field{volume}{16}
+      \field{year}{2005}
+      \field{pages}{645\bibrangedash 678}
+      \range{pages}{34}
     \endentry
   \endsortlist
 \endrefsection

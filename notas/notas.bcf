@@ -2049,13 +2049,24 @@
     <bcf:datasource type="file" datatype="bibtex">biblio.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">ruppert1980trimmed</bcf:citekey>
-    <bcf:citekey order="2">witten2011data</bcf:citekey>
-    <bcf:citekey order="3">kotsiantis2006discretization</bcf:citekey>
-    <bcf:citekey order="4">dougherty1995supervised</bcf:citekey>
-    <bcf:citekey order="5">irani1993multi</bcf:citekey>
-    <bcf:citekey order="6">arthur2007k</bcf:citekey>
-    <bcf:citekey order="7">Hu07</bcf:citekey>
+    <bcf:citekey order="1">larose2014discovering</bcf:citekey>
+    <bcf:citekey order="2">oct2014poll</bcf:citekey>
+    <bcf:citekey order="3">larose2014discovering</bcf:citekey>
+    <bcf:citekey order="4">larose2014discovering</bcf:citekey>
+    <bcf:citekey order="5">crispdmpdf</bcf:citekey>
+    <bcf:citekey order="6">asumdmarticle</bcf:citekey>
+    <bcf:citekey order="7">ruppert1980trimmed</bcf:citekey>
+    <bcf:citekey order="8">witten2011data</bcf:citekey>
+    <bcf:citekey order="9">kotsiantis2006discretization</bcf:citekey>
+    <bcf:citekey order="10">dougherty1995supervised</bcf:citekey>
+    <bcf:citekey order="11">irani1993multi</bcf:citekey>
+    <bcf:citekey order="12">quinlan1992learning</bcf:citekey>
+    <bcf:citekey order="13">xu2005survey</bcf:citekey>
+    <bcf:citekey order="14">aloise2009np</bcf:citekey>
+    <bcf:citekey order="15">arthur2007k</bcf:citekey>
+    <bcf:citekey order="16">bahmani2012scalable</bcf:citekey>
+    <bcf:citekey order="17">bezdek1984fcm</bcf:citekey>
+    <bcf:citekey order="18">Hu07</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" name="nty/global" type="entry" sortscheme="nty" sortnamekeyscheme="global">
   <bcf:sorting>
