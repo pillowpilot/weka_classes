@@ -226,8 +226,31 @@ Otra variación es la función de pertenencia de una instancia a un grupo. El al
 \end{description}
 
 \part{Evaluacion}
+La evaluación de un modelo es fundamental para la minería de datos ya que permite tomar las decisiones sobre que modelos desplegar, que parámetros utilizar y que comportamiento esperar.
 
-%TODO Add bootstrap
+Tanto para entrenar como para evaluar un modelo se necesitan de datos, cuando más datos se utilizen en el entramiento mayor aprendizaje y cuando más datos se usen en la evaluación menor varianza en la predicción, y es usual no disponer de una cantidad adecuada de datos\footnote{Los datos pueden necesitar ser obtenidos manualmente.} por ello se buscan formas de maximizar el provecho.
+
+Un punto realmente importante es evitar que mismos datos se utilicen en ambos procedimientos. Por ejemplo, si utilizamos todos los datos para entrenar un modelo y lo evaluamos con \textbf{los mismos} datos, entonces la predicción será exageradamente optimista en algunos casos. 
+
+\section{Entrenamiento, validacion y prueba} % TODO Rename to Holdout
+Esta estrategia de evaluación exije la existencia de 3 conjuntos de datos representativos. El conjunto de entrenamiento, \textit{training set}, el cual es utilizado para alimentar a los modelos. El conjunto de validación, \textit{validation set}, el cual es utilizado para optimizar los parametros del modelo. El conjunto de pruebas, \textit{test set}, el cual es utilizado para la \textbf{evaluación final}.
+
+Primeramente se entrena el modelo con el training set y luego se evalua su desempeño con el validation set. Esto se repite hasta encontrar el conjunto de parametros óptimo. Finalmente se utiliza el test set para obtener una predicción del desepeño del modelo en el despliege. Es posible utilizar la unión de los conjuntos de entrenamiento y de validación para construir el modelo final con los parámetros optimizados y evaluarlo con el conjunto de pruebas, de esta forma se máximiza la cantidad de datos utilizado para entrenar el modelo.
+
+Si no se dispone de 3 conjuntos de datos se puede realizar un muestreo aleatorio (o un muestreo aleatorio estratificado\footnote{Un muestreo estratificado es cuando se busca mantener la proporción de muestras según su clase.} en el caso de clase nominal) sobre el conjunto de datos.
+
+El principal inconveniente de este método es que no se utilizan todos los datos disponibles para el entrenamiento del modelo.
+
+\section{Cross Validation}
+El ``$k$ folds Cross Validation''  se centra en utilizar toda la información disponible en los datos a costa de tiempo de computo. Primeramente se divide el conjunto de datos en $k$ subconjuntos o \textif{folds} del mismo tamaño. Luego se entrena y evalua el modelo $k$ utilizando en cada iteración un \textit{fold} distinto para la evaluación y los demas para el entrenamiento. Luego se utiliza todo el conjunto de datos para entrenar el modelo final. Los $k$ desempeños disponibles se promedian, o se combinan de alguna manera, para obtener el desempeño del modelo final.
+
+Así se utilizan todos los datos tanto para entrenar como para evaluar sin embargo no sobre el mismo modelo. Es evidente que la principal desventaja es la cantidad de entrenamientos y evaluaciones a realizar y además no disponemos de un procedimiento para optimizar los parámetros.
+
+\section{Leave-one-out Cross Validation y Bootstrap}
+``LoU CV'' es simplemente ``$n$ folds Cross Validation''. Esto implica un alto costo computacionalmente hablando además la evaluación se realiza sobre una sola instancia lo cual garantiza un conjunto de pruebas no representativo.
+
+``Bootstrap'' hace uso del muestreo con reemplazo. Obtiene $n$ muestras con reemplazo desde el conjunto de datos de $n$ instancias y muy probablemente selecionaremos una misma instancia varias veces podemos utilizar las instancias no selecionadas para construir un conjunto de pruebas.
+
 %TODO add atribute bagging
 
 \part{Selección de Modelos}
