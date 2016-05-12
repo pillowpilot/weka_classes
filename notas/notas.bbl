@@ -216,6 +216,36 @@
       \field{note}{Accedido: 2016-mayo}
       \field{title}{Have you seen ASUM-DM?}
     \endentry
+    \entry{hodge2004survey}{article}{}
+      \name{author}{2}{}{%
+        {{hash=82c0edbf5f55f029528dcea6e1562c52}{%
+           family={Hodge},
+           family_i={H\bibinitperiod},
+           given={Victoria\bibnamedelima J},
+           given_i={V\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=b13a3b75a04116c7652e1fc135570be8}{%
+           family={Austin},
+           family_i={A\bibinitperiod},
+           given={Jim},
+           given_i={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{71107ee50271c8d217a72e60c14308dd}
+      \strng{fullhash}{71107ee50271c8d217a72e60c14308dd}
+      \field{sortinit}{H}
+      \field{sortinithash}{82012198d5dfa657b8c4a168793268a6}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Artificial Intelligence Review}
+      \field{number}{2}
+      \field{title}{A survey of outlier detection methodologies}
+      \field{volume}{22}
+      \field{year}{2004}
+      \field{pages}{85\bibrangedash 126}
+      \range{pages}{42}
+    \endentry
     \entry{Hu07}{misc}{}
       \name{author}{1}{}{%
         {{hash=935878b7e9071b3ba4b2cd27c85877aa}{%
